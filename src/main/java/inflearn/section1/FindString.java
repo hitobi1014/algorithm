@@ -38,6 +38,12 @@ public class FindString {
                 ++cnt;
             }
         }
+
+        // 향상된 for문 ver
+//        for (char x : str.toCharArray()) {
+//            if (tx == x) cnt++;
+//            System.out.println("cnt : " + cnt);
+//        }
         return cnt;
     }
 }
