@@ -23,23 +23,35 @@ public class ConvertString {
         String str = sc.nextLine(); // 입력받을 문자열
 
         ConvertString conStr = new ConvertString();
-        String ret = conStr.solution(str);
+        StringBuffer ret = conStr.solution(str);
         System.out.println(ret);
 
     }
 
-    public String solution(String str){
-        String ret = "";
+    public StringBuffer solution(String str){
+        StringBuffer sb = new StringBuffer();
 
         for (char c : str.toCharArray()) {
             if (Character.isUpperCase(c)) {          // 문자가 대문자면
-                ret += Character.toLowerCase(c);        // 문자를 소문자로 변환 후 ret에 +
+                sb.append(Character.toLowerCase(c));
+//                ret += Character.toLowerCase(c);        // 문자를 소문자로 변환 후 ret에 +
             } else if (Character.isLowerCase(c)) {  // 문자가 소문자면
-                ret += Character.toUpperCase(c);        // 문자를 대문자로 변환 후 ret에 +
+                sb.append(Character.toUpperCase(c));
+//                ret += Character.toUpperCase(c);        // 문자를 대문자로 변환 후 ret에 +
             }
         }
+//        String ret = sb.toString();
+        // 아스키문자로도 비교 가능
+        // 대문자 : 65~90 소문자 : 97~122
+//        for (char c : str.toCharArray()) {
+//            if (c >= 97 && c<= 122) {   // 문자가 소문자이면
+//                ret += (char)(c-32);
+//            } else {                    // 문자가 대문자이면
+//                ret += (char)(c+32);
+//            }
+//        }
 
-        return ret;
+        return sb;
     }
 
 }
