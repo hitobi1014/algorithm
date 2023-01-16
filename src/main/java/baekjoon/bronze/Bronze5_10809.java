@@ -24,13 +24,18 @@ public class Bronze5_10809 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String word = br.readLine();
-        int[] alphaArr = new int[('z'-'a')+1];
+        int[] alphaArr = new int[('z'-'a')+1]; // 97~122
         for (int i = 0; i < alphaArr.length; i++) {
             alphaArr[i] = -1;
         }
 
-        // 단어에서 중복없이 첫 번째 문자만 고르기
-        System.out.println(alphaArr.length);
+        for (char x : word.toCharArray()) {
+            alphaArr[x-97] = word.indexOf(x);
+        }
+
+        for (int a : alphaArr) {
+            System.out.print(a + " ");
+        }
 
     }
 }
