@@ -25,35 +25,26 @@ import java.util.Map;
 public class Bronze1_1157 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String word = br.readLine();
-        Map<Character, Integer> wordMap = new HashMap<>();
+        String word = br.readLine().toUpperCase();
+        int max = Integer.MIN_VALUE;
+        char answer = ' ';
+        int cnt;
+        char c;
 
         for (int i = 0; i < word.length(); i++) {
-            int cnt = 0;
-            char c = word.charAt(i);
-
-            if (Character.isLetter(c)) {
-                continue;
-            }
+            cnt = 0;
+            c = word.charAt(i);
 
             for (int j = i; j < word.length(); j++) {
-                if (Character.isLetter(word.charAt(j))
-                        && word.charAt(i) == word.charAt(j)) {
-                    cnt++;
-                    word = word.substring(0, j) + "," + word.substring(j + 1);
-                }
+                if (!(c == word.charAt(j))) continue;
+                cnt++;
             }
 
-            wordMap.put(c, cnt);
-        }
-
-        char answer = ' ';
-        int max = Integer.MIN_VALUE;
-
-        for (char x : wordMap.keySet()) {
-            if (wordMap.get(x) > max){
-                max = wordMap.get(x);
-                answer = x;
+            if (cnt > max) {
+                answer = c;
+                max = cnt;
+            } else if (cnt == max) {
+                answer = '?';
             }
         }
 
