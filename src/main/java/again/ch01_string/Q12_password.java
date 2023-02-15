@@ -40,20 +40,19 @@ import java.io.InputStreamReader;
 public class Q12_password {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int strLength = Integer.parseInt(br.readLine());
         String str = br.readLine();
-        String[] words = null;
+        StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < str.length() / 7; i++) {
+        for (int i = 0; i < strLength; i++) {
             String s = "";
             for (int j = 0; j < 7; j++) {
-                s += str.charAt((i*7)+j);
+                char x = str.charAt((i * 7) + j);
+                sb.append(x == '#' ? 1 : 0);
             }
-            words[i] = s;
+            char c = (char)Integer.parseInt(sb.toString(),2);
+            System.out.print(c);
+            sb.setLength(0);
         }
-
-        for (String x : words) {
-            System.out.println(x);
-        }
-
     }
 }
