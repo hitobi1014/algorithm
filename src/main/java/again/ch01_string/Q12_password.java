@@ -1,5 +1,9 @@
 package again.ch01_string;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Q.
  * 현수는 영희에게 알파벳 대문자로 구성된 비밀편지를 매일 컴퓨터를 이용해 보냅니다.
@@ -34,7 +38,22 @@ package again.ch01_string;
  * 예시출력 => COOL
  */
 public class Q12_password {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+        String[] words = null;
+
+        for (int i = 0; i < str.length() / 7; i++) {
+            String s = "";
+            for (int j = 0; j < 7; j++) {
+                s += str.charAt((i*7)+j);
+            }
+            words[i] = s;
+        }
+
+        for (String x : words) {
+            System.out.println(x);
+        }
 
     }
 }

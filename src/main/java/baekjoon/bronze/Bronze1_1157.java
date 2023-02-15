@@ -28,26 +28,26 @@ public class Bronze1_1157 {
         String word = br.readLine().toUpperCase();
         int max = Integer.MIN_VALUE;
         char answer = ' ';
-        int cnt;
-        char c;
+        Map<Character, Integer> map = new HashMap<>();
 
         for (int i = 0; i < word.length(); i++) {
-            cnt = 0;
-            c = word.charAt(i);
-
-            for (int j = i; j < word.length(); j++) {
-                if (!(c == word.charAt(j))) continue;
-                cnt++;
-            }
-
-            if (cnt > max) {
-                answer = c;
-                max = cnt;
-            } else if (cnt == max) {
-                answer = '?';
+            char x = word.charAt(i);
+            if(map.containsKey(x)){
+                map.put(x,map.get(x)+1);
+            } else {
+                map.put(x,1);
             }
         }
 
+        for(Map.Entry<Character, Integer> entry : map.entrySet()){
+            if (max < entry.getValue()){
+                answer = entry.getKey();
+                max = entry.getValue();
+            } else if (max == entry.getValue()){
+                answer = '?';
+                max = entry.getValue();
+            }
+        }
         System.out.println(answer);
     }
 }
