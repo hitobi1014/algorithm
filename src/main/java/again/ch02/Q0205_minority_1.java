@@ -25,24 +25,33 @@ import java.util.List;
  */
 public class Q0205_minority_1 {
     public static void main(String[] args) throws IOException {
+        long start = System.currentTimeMillis();
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int count = Integer.parseInt(br.readLine());
-        int answer = 1;
+        int answer = 0;
 
-        List<Integer> minority = new ArrayList<>();
-        minority.add(2);
+        boolean[] minority = new boolean[count + 1];
+        minority[0] = true;
+        minority[1] = true;
+        int j = 0;
 
-        for (int i = 3; i < count + 1; i++) {
-            boolean flag = false;
+        for (int i = 2; i< (int) Math.sqrt(count) + 1; i++) {
+            if(!minority[i]) j = 2;
 
-            for (int k = 0; k < minority.size(); k++) {
-                flag = i % minority.get(k) == 0 ? false : true;
-                if(!flag) break;
+            while (i * j <= count) {
+                minority[i * j] = true;
+                j++;
             }
+        }
 
-            if (flag) answer++;
+        for (boolean x : minority) {
+            if(!x) answer++;
         }
 
         System.out.println(answer);
+
+        long end = System.currentTimeMillis();
+        System.out.println((end-start) + "ms");
     }
 }

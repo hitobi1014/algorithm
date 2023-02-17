@@ -1,4 +1,4 @@
-package baekjoon.silver;
+package baekjoon.silver.lv5;
 
 /**
  * Question
