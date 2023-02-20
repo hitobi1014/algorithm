@@ -37,13 +37,28 @@ public class Q0209_gridMaximumSum {
 
         for (int i = 0; i < n; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-            int sum = 0;
-            while (st.hasMoreTokens()) {
-                sum += Integer.parseInt(st.nextToken());
-            }
 
-            max = max < sum ? sum : max;
+            for (int j = 0; j < n; j++) {
+                numArr[i][j] = Integer.parseInt(st.nextToken());
+            }
         }
 
+        // a: 행 sum , b: 열 sum, c: 좌측위->우측아래, d: 좌측아래 -> 우측위
+        int c = 0, d = 0;
+        for (int i = 0; i < n; i++) {
+            int a = 0;
+            int b = 0;
+
+            for (int j = 0; j < n; j++) {
+                a += numArr[i][j];
+                b += numArr[j][i];
+            }
+
+            c += numArr[i][i];
+            d += numArr[i][n - i - 1];
+            max = Math.max(max, Math.max(a, b));
+        }
+
+        System.out.println(Math.max(max, Math.max(c, d)));
     }
 }
