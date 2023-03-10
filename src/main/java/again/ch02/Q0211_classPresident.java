@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 import java.util.StringTokenizer;
 
 /**
@@ -44,39 +43,43 @@ public class Q0211_classPresident {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int[][] numArr = new int[n][n];
+        int[][] numArr = new int[n][5];
         Map<Integer, Integer> student = new HashMap<>();
         int answer = 0;
-        int max = 0;
+        int max = Integer.MIN_VALUE;
 
         for (int i = 0; i < numArr.length; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-            for (int j = 0; j < numArr.length; j++) {
+            for (int j = 0; j < 5; j++) {
                 numArr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
-        for (int j = 0; j < numArr.length; j++) {
+        for (int i = 0; i < numArr.length; i++) {
+            student.put(i + 1, 0);
+            Map<Integer, String> sameStudent = new HashMap<>();
 
-            for (int i = 0; i < numArr.length; i++) {
-                int a = numArr[i][j];
+            for (int j = 0; j < 5; j++) {
+                int schoolClass = numArr[i][j];
                 int repeat = 0;
-
                 for (int k = 0; k < numArr.length; k++) {
-                    if (i == k) continue;
-
-                    if (a == numArr[k][j]) repeat++;
+                    if (i == k || sameStudent.containsKey(k)) continue;
+                    if (schoolClass == numArr[k][j]) {
+                        sameStudent.put(k, "");
+                        repeat++;
+                    }
                 }
-
-                student.put(i + 1, Optional.ofNullable(student.get(i+1)).orElse(0) + repeat);
+                student.put(i + 1, student.get(i + 1) + repeat);
             }
         }
 
-        for (Map.Entry<Integer,Integer> entry : student.entrySet()) {
-            int x =  entry.getValue();
+        for (Map.Entry<Integer, Integer> entry : student.entrySet()) {
+            int x = entry.getValue();
             if (max < x) {
                 max = x;
                 answer = entry.getKey();
+            } else if (max == x) {
+                answer = Math.min(answer, entry.getKey());
             }
         }
 
