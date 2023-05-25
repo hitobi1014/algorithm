@@ -1,24 +1,19 @@
-package programmers;
+package programmers.lv1;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
-public class Main {
+/**
+ * https://school.programmers.co.kr/learn/courses/30/lessons/160586
+ *
+ * Lv1
+ * 소요시간 : 3시간
+ */
+public class 대충만든자판 {
     public static void main(String[] args) {
         String[] keymap = {"ABACD", "BCEFD"};
         String[] target = {"ABCD", "AABB"};
 
-        Set<String> set = new HashSet<>(Arrays.asList(keymap));
-        set.remove("");
-
-        for (String str : set) {
-            System.out.println(str);
-        }
-
-        System.out.println(set.toString());
-
-//        System.out.println(Arrays.toString(solution(keymap, target)));
+        System.out.println(Arrays.toString(solution(keymap, target)));
     }
 
     public static int[] solution(String[] keymap, String[] targets) {
@@ -53,5 +48,4 @@ public class Main {
         }
         return answer;
     }
-
 }
