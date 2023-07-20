@@ -1,4 +1,4 @@
-package inflearn.section3;
+package 인프런.section3;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package inflearn.section3;
+package 인프런.section3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,9 +32,9 @@ public class _06_최대길이연속부분수열 {
         _06_최대길이연속부분수열 T = new _06_최대길이연속부분수열();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken());
+        int n = Integer.parseInt(st.nextToken());
         int k = Integer.parseInt(st.nextToken());
-        int[] arr = new int[N];
+        int[] arr = new int[n];
         st = new StringTokenizer(br.readLine());
 
         for (int i = 0; i < arr.length; i++) {
@@ -43,6 +43,23 @@ public class _06_최대길이연속부분수열 {
 
         System.out.println(T.solve(arr, k));
 
+        //인프런 풀이
+        System.out.println(T.infSolve(n, k, arr));
+
+    }
+
+    public int infSolve(int n, int k, int[] arr) {
+        int answer = 0, cnt = 0, lt = 0;
+        for (int rt = 0; rt < n; rt++) {
+            if(arr[rt] ==0) cnt++;
+            while (cnt > k) {
+                if (arr[lt] == 0) cnt--;
+                lt++;
+            }
+
+            answer = Math.max(answer, rt - lt + 1);
+        }
+        return answer;
     }
 
     public int solve(int[] arr, int k) {

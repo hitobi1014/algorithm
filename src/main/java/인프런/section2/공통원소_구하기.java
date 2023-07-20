@@ -1,4 +1,4 @@
-package inflearn.section2;
+package 인프런.section2;
 
 
 import java.io.BufferedReader;
