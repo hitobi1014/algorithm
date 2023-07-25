@@ -10,7 +10,7 @@ public class Main {
 
     public static int solution(int sugar) {
         int answer = 0;
-//        int[] items = {3, 5};
+//        int[] items = {3, 5};//// 테스트
         int remain = 0;
 
         remain = sugar % 5;
