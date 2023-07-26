@@ -15,5 +15,7 @@ public class Main {
         } else if (sugar % 5 == 2 || sugar % 5 == 4) {
             System.out.println((sugar / 5) + 2);
         }
+
     }
+
 }
