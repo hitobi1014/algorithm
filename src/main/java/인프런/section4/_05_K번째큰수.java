@@ -1,18 +1,14 @@
 package 인프런.section4;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.PriorityQueue;
-import java.util.StringTokenizer;
+import java.util.*;
 
 /**
  * https://cote.inflearn.com/contest/10/problem/04-05
  */
 public class _05_K번째큰수 {
-    static int N;
-    static int[] numArr;
-    static int[] temp = new int[3];
-    static PriorityQueue<Integer> pq = new PriorityQueue<>((o1, o2) -> o2-o1);
     public static void main(String[] args) throws Exception{
         /*
         * 1~100 N장 카드
@@ -23,44 +19,74 @@ public class _05_K번째큰수 {
         * ...=> 모든 경우의수의 합을 구한뒤 배열에 넣고 정렬 후 K-1 인덱스 뽑기
         * n! / (n-r)!
         *  */
+        System.setIn(new FileInputStream("D:\\00.project\\algorithm\\src\\main\\java\\인프런\\inflearn.txt"));
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        N = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
 
-        numArr = new int[N];
+        int[] numArr = new int[N];
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
             numArr[i] = Integer.parseInt(st.nextToken());
         }
-        combination(0,0);
-        int c = 1;
-        int topNum = pq.poll();
-        while (pq.peek()!=null) {
-            if (c == 3) break;
-            if (topNum != pq.peek()) {
-                c++;
-            }
-            topNum = pq.poll();
-        }
-        c = c == 1 ? -1 : topNum;
-        System.out.println(c);
+        System.out.println(infSolution(numArr,N,K));
+
+//        combination(0,0);
+//
+//        int c = 1;
+//        list.sort((o1, o2) -> Integer.compare(o2,o1));
+//        int topNum = list.get(0);
+//        while (list.get(0)!=null) {
+//            if (c == 3) break;
+//            if (topNum != list.get(0)) {
+//                c++;
+//            }
+//            topNum = list.get(0);
+//            list.remove(0);
+//        }
+//        c = c == 1 ? -1 : topNum;
+//        System.out.println(c);
     }
 
-    static void combination(int cnt,int start) {
-        if (cnt == 3) {
-            int sum = 0;
-            for (int x : temp) {
-                sum += x;
+
+    /**
+     * 인프런 풀이 TreeSet 이용
+     * 순서상관x => 조합 , 재귀함수이용x 반복문o
+     */
+    static int infSolution(int[] arr, int n, int K) {
+        int answer = -1;
+        TreeSet<Integer> Tset = new TreeSet<>(Collections.reverseOrder());
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                for (int l = j + 1; l < n; l++) {
+                    Tset.add(arr[i] + arr[j] + arr[l]);
+                }
             }
-            pq.add(sum);
-            return;
         }
-        // n-1C3-1
-        for (int i = start; i < N; i++) {
-            temp[cnt] = numArr[i];
-            combination(cnt + 1, i + 1);
+        int cnt=0;
+
+        for (int x : Tset) {
+            cnt++;
+            if (cnt == K) return x;
         }
+        return answer;
     }
+
+//    static void combination(int cnt,int start) {
+//        if (cnt == 3) {
+//            int sum = 0;
+//            for (int x : temp) {
+//                sum += x;
+//            }
+//            list.add(sum);
+//            return;
+//        }
+//        // n-1C3-1
+//        for (int i = start; i < N; i++) {
+//            temp[cnt] = numArr[i];
+//            combination(cnt + 1, i + 1);
+//        }
+//    }
 }
