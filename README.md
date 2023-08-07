@@ -14,6 +14,7 @@
 ### :mag_right: Silver
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[12847_꿀 아르바이트](https://www.acmicpc.net/problem/12847)|누적합|[Link](https://github.com/hitobi1014/algorithm/tree/be7a18639a3cc4c4fd4d44d0b93baa850f4509e7/%EB%B0%B1%EC%A4%80/Silver/1764.%E2%80%85%EB%93%A3%EB%B3%B4%EC%9E%A1)|23/08/08
 [1764_듣보잡](https://www.acmicpc.net/problem/1764)|해시|[Link](https://github.com/hitobi1014/algorithm/tree/be7a18639a3cc4c4fd4d44d0b93baa850f4509e7/%EB%B0%B1%EC%A4%80/Silver/1764.%E2%80%85%EB%93%A3%EB%B3%B4%EC%9E%A1)|23/08/07
 [6603_로또](https://www.acmicpc.net/problem/6603)|재귀|[Link](https://github.com/hitobi1014/algorithm/tree/6c7441e0fff978b59b9409029b2df35dbc2f9b04/%EB%B0%B1%EC%A4%80/Silver/6603.%E2%80%85%EB%A1%9C%EB%98%90)|23/08/07
 [12891_DNA 비밀번호](https://www.acmicpc.net/problem/12891)|슬라이딩 윈도우|[Link](https://github.com/hitobi1014/algorithm/tree/ab707971042ae1353df6d909396e55f4f1bfa9ab/%EB%B0%B1%EC%A4%80/Silver/12891.%E2%80%85DNA%E2%80%85%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8)|23/08/03
