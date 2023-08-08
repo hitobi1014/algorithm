@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 /**
- * 2493 - 탑
+ * B2493_탑_최민준
  */
 public class Main {
     static Map<Integer, Integer> map = new HashMap<>();
