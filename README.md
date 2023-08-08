@@ -40,8 +40,9 @@
 ### :mag_right: Lv.1
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
-[완주하지 못한 선수](https://school.programmers.co.kr/learn/courses/30/lessons/42576)|해시|[Link](https://github.com/hitobi1014/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/lv1/42576.%E2%80%85%EC%99%84%EC%A3%BC%ED%95%98%EC%A7%80%E2%80%85%EB%AA%BB%ED%95%9C%E2%80%85%EC%84%A0%EC%88%98)|23/07/16
 [k번째 수](https://school.programmers.co.kr/learn/courses/30/lessons/42748)|정렬|[Link](https://github.com/hitobi1014/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/lv1/42748.%E2%80%85K%EB%B2%88%EC%A7%B8%EC%88%98)|23/07/18
+[완주하지 못한 선수](https://school.programmers.co.kr/learn/courses/30/lessons/42576)|해시|[Link](https://github.com/hitobi1014/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/lv1/42576.%E2%80%85%EC%99%84%EC%A3%BC%ED%95%98%EC%A7%80%E2%80%85%EB%AA%BB%ED%95%9C%E2%80%85%EC%84%A0%EC%88%98)|23/07/16
+
 
 ### :mag_right: Lv.2
 문제|알고리즘|풀이|날짜
@@ -55,8 +56,10 @@
 ---|:---:|:---:|:---:
 
 ## SWEA
-문제|알고리즘|풀이|날짜
----|:---:|:---:|:---:
-[1233_사칙연산 유효성 검사](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV141176AIwCFAYD)|트리|[Link](https://github.com/hitobi1014/algorithm/tree/853987ef4683ee7bf038cbe2808aad84a1952235/SWEA/D4/1233.%E2%80%85%EF%BC%BBS%EF%BC%8FW%E2%80%85%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0%E2%80%85%EA%B8%B0%EB%B3%B8%EF%BC%BD%E2%80%859%EC%9D%BC%EC%B0%A8%E2%80%85%EF%BC%8D%E2%80%85%EC%82%AC%EC%B9%99%EC%97%B0%EC%82%B0%E2%80%85%EC%9C%A0%ED%9A%A8%EC%84%B1%E2%80%85%EA%B2%80%EC%82%AC)|23/08/08
+문제|레벨|알고리즘|풀이|날짜
+---|:---:|:---:|:---:|:---:
+[9229_한빈이와 Spot Mart](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AW8Wj7cqbY0DFAXN)|D3|재귀|[Link](https://github.com/hitobi1014/algorithm/blob/91319c6d4592f582af33be9989cb9cb562760851/SWEA/D3/9229.%20%ED%95%9C%EB%B9%88%EC%9D%B4%EC%99%80%20Spot%20Mart/S9229_%ED%95%9C%EB%B9%88%EC%9D%B4%EC%99%80_SpotMart.java)|23/08/09
+[1233_사칙연산 유효성 검사](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV141176AIwCFAYD)|D4|트리|[Link](https://github.com/hitobi1014/algorithm/tree/853987ef4683ee7bf038cbe2808aad84a1952235/SWEA/D4/1233.%E2%80%85%EF%BC%BBS%EF%BC%8FW%E2%80%85%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0%E2%80%85%EA%B8%B0%EB%B3%B8%EF%BC%BD%E2%80%859%EC%9D%BC%EC%B0%A8%E2%80%85%EF%BC%8D%E2%80%85%EC%82%AC%EC%B9%99%EC%97%B0%EC%82%B0%E2%80%85%EC%9C%A0%ED%9A%A8%EC%84%B1%E2%80%85%EA%B2%80%EC%82%AC)|23/08/08
+
 
 ## 기타
