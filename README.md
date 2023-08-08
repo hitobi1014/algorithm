@@ -40,10 +40,15 @@
 ### :mag_right: Lv.1
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[완주하지 못한 선수](https://school.programmers.co.kr/learn/courses/30/lessons/42576)|해시|[Link](https://github.com/hitobi1014/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/lv1/42576.%E2%80%85%EC%99%84%EC%A3%BC%ED%95%98%EC%A7%80%E2%80%85%EB%AA%BB%ED%95%9C%E2%80%85%EC%84%A0%EC%88%98)|23/07/16
+[k번째 수](https://school.programmers.co.kr/learn/courses/30/lessons/42748)|정렬|[Link](https://github.com/hitobi1014/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/lv1/42748.%E2%80%85K%EB%B2%88%EC%A7%B8%EC%88%98)|23/07/18
 
 ### :mag_right: Lv.2
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[더 맵게](https://school.programmers.co.kr/learn/courses/30/lessons/42626?language=java)|힙|[Link](https://github.com/hitobi1014/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/lv2/42626.%E2%80%85%EB%8D%94%E2%80%85%EB%A7%B5%EA%B2%8C)|23/07/18
+[올바른 괄호](https://school.programmers.co.kr/learn/courses/30/lessons/12909)|스택/큐|[Link](https://github.com/hitobi1014/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/lv2/12909.%E2%80%85%EC%98%AC%EB%B0%94%EB%A5%B8%E2%80%85%EA%B4%84%ED%98%B8)|23/07/18
+[기능 개발](https://school.programmers.co.kr/learn/courses/30/lessons/42586)|스택/큐|[Link](https://github.com/hitobi1014/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/lv2/42586.%E2%80%85%EA%B8%B0%EB%8A%A5%EA%B0%9C%EB%B0%9C)|23/07/18
 
 ### :mag_right: Lv.3
 문제|알고리즘|풀이|날짜
