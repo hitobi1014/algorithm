@@ -15,6 +15,7 @@
 ### :mag_right: Silver
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[11286_절댓값 힙](https://www.acmicpc.net/problem/11286)|자료구조|[Link](https://github.com/hitobi1014/algorithm/tree/90137ab036ce9240b36ad49d5ce157bc2f5d311d/%EB%B0%B1%EC%A4%80/Silver/11286.%E2%80%85%EC%A0%88%EB%8C%93%EA%B0%92%E2%80%85%ED%9E%99)|23/08/09
 [9095_1,2,3 더하기](https://www.acmicpc.net/problem/9095)|동적계획법|[Link](https://github.com/hitobi1014/algorithm/tree/3a981cab77c5a9b03bd60babb41d7b3ab9087217/%EB%B0%B1%EC%A4%80/Silver/9095.%E2%80%851%EF%BC%8C%E2%80%852%EF%BC%8C%E2%80%853%E2%80%85%EB%8D%94%ED%95%98%EA%B8%B0)|23/08/08
 [12847_꿀 아르바이트](https://www.acmicpc.net/problem/12847)|누적합|[Link](https://github.com/hitobi1014/algorithm/tree/be7a18639a3cc4c4fd4d44d0b93baa850f4509e7/%EB%B0%B1%EC%A4%80/Silver/1764.%E2%80%85%EB%93%A3%EB%B3%B4%EC%9E%A1)|23/08/08
 [1764_듣보잡](https://www.acmicpc.net/problem/1764)|해시|[Link](https://github.com/hitobi1014/algorithm/tree/be7a18639a3cc4c4fd4d44d0b93baa850f4509e7/%EB%B0%B1%EC%A4%80/Silver/1764.%E2%80%85%EB%93%A3%EB%B3%B4%EC%9E%A1)|23/08/07
