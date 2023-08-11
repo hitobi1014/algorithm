@@ -15,6 +15,8 @@
 ### :mag_right: Silver
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[1931_회의실배정](https://www.acmicpc.net/problem/1931)|그리디|[Link](https://github.com/hitobi1014/algorithm/blob/19f13deadb38413d6ebdb01b2147a433083a8f0a/%EB%B0%B1%EC%A4%80/Silver/1931.%E2%80%85%ED%9A%8C%EC%9D%98%EC%8B%A4%E2%80%85%EB%B0%B0%EC%A0%95/README.md)|23/08/11
+[1316_그룹 단어 체커](https://www.acmicpc.net/problem/1316)|구현|[Link](https://github.com/hitobi1014/algorithm/tree/dc8bc1f75e2cd9480ca23349eee7769bf0b2840e/%EB%B0%B1%EC%A4%80/Silver/1316.%E2%80%85%EA%B7%B8%EB%A3%B9%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EC%B2%B4%EC%BB%A4)|23/08/11
 [11286_절댓값 힙](https://www.acmicpc.net/problem/11286)|자료구조|[Link](https://github.com/hitobi1014/algorithm/tree/90137ab036ce9240b36ad49d5ce157bc2f5d311d/%EB%B0%B1%EC%A4%80/Silver/11286.%E2%80%85%EC%A0%88%EB%8C%93%EA%B0%92%E2%80%85%ED%9E%99)|23/08/09
 [9095_1,2,3 더하기](https://www.acmicpc.net/problem/9095)|동적계획법|[Link](https://github.com/hitobi1014/algorithm/tree/3a981cab77c5a9b03bd60babb41d7b3ab9087217/%EB%B0%B1%EC%A4%80/Silver/9095.%E2%80%851%EF%BC%8C%E2%80%852%EF%BC%8C%E2%80%853%E2%80%85%EB%8D%94%ED%95%98%EA%B8%B0)|23/08/08
 [12847_꿀 아르바이트](https://www.acmicpc.net/problem/12847)|누적합|[Link](https://github.com/hitobi1014/algorithm/tree/be7a18639a3cc4c4fd4d44d0b93baa850f4509e7/%EB%B0%B1%EC%A4%80/Silver/1764.%E2%80%85%EB%93%A3%EB%B3%B4%EC%9E%A1)|23/08/08
@@ -59,6 +61,7 @@
 ## SWEA
 문제|레벨|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:|:---:
+[6808_규영이와 인영이의 카드게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWgv9va6HnkDFAW0&categoryId=AWgv9va6HnkDFAW0&categoryType=CODE&problemTitle=6808&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1)|D3|NP|[Link](https://github.com/hitobi1014/algorithm/blob/4b1f73cbe7f75a5c8e2b77a18a3818c191245129/SWEA/D3/6808.%E2%80%85%EA%B7%9C%EC%98%81%EC%9D%B4%EC%99%80%E2%80%85%EC%9D%B8%EC%98%81%EC%9D%B4%EC%9D%98%E2%80%85%EC%B9%B4%EB%93%9C%EA%B2%8C%EC%9E%84/%EA%B7%9C%EC%98%81%EC%9D%B4%EC%99%80%E2%80%85%EC%9D%B8%EC%98%81%EC%9D%B4%EC%9D%98%E2%80%85%EC%B9%B4%EB%93%9C%EA%B2%8C%EC%9E%84.java)|23/08/10
 [9229_한빈이와 Spot Mart](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AW8Wj7cqbY0DFAXN)|D3|재귀|[Link](https://github.com/hitobi1014/algorithm/blob/91319c6d4592f582af33be9989cb9cb562760851/SWEA/D3/9229.%20%ED%95%9C%EB%B9%88%EC%9D%B4%EC%99%80%20Spot%20Mart/S9229_%ED%95%9C%EB%B9%88%EC%9D%B4%EC%99%80_SpotMart.java)|23/08/09
 [1233_사칙연산 유효성 검사](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV141176AIwCFAYD)|D4|트리|[Link](https://github.com/hitobi1014/algorithm/tree/853987ef4683ee7bf038cbe2808aad84a1952235/SWEA/D4/1233.%E2%80%85%EF%BC%BBS%EF%BC%8FW%E2%80%85%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0%E2%80%85%EA%B8%B0%EB%B3%B8%EF%BC%BD%E2%80%859%EC%9D%BC%EC%B0%A8%E2%80%85%EF%BC%8D%E2%80%85%EC%82%AC%EC%B9%99%EC%97%B0%EC%82%B0%E2%80%85%EC%9C%A0%ED%9A%A8%EC%84%B1%E2%80%85%EA%B2%80%EC%82%AC)|23/08/08
 
