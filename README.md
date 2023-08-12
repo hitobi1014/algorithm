@@ -15,6 +15,7 @@
 ### :mag_right: Silver
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[10828_스택](https://www.acmicpc.net/problem/10828)|구현|[Link](https://github.com/hitobi1014/algorithm/tree/36d427ec80cbc025ace38eb7371e422b10d6f264/%EB%B0%B1%EC%A4%80/Silver/10828.%E2%80%85%EC%8A%A4%ED%83%9D)|23/08/13
 [1931_회의실배정](https://www.acmicpc.net/problem/1931)|그리디|[Link](https://github.com/hitobi1014/algorithm/blob/19f13deadb38413d6ebdb01b2147a433083a8f0a/%EB%B0%B1%EC%A4%80/Silver/1931.%E2%80%85%ED%9A%8C%EC%9D%98%EC%8B%A4%E2%80%85%EB%B0%B0%EC%A0%95/README.md)|23/08/11
 [1316_그룹 단어 체커](https://www.acmicpc.net/problem/1316)|구현|[Link](https://github.com/hitobi1014/algorithm/tree/dc8bc1f75e2cd9480ca23349eee7769bf0b2840e/%EB%B0%B1%EC%A4%80/Silver/1316.%E2%80%85%EA%B7%B8%EB%A3%B9%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EC%B2%B4%EC%BB%A4)|23/08/11
 [11286_절댓값 힙](https://www.acmicpc.net/problem/11286)|자료구조|[Link](https://github.com/hitobi1014/algorithm/tree/90137ab036ce9240b36ad49d5ce157bc2f5d311d/%EB%B0%B1%EC%A4%80/Silver/11286.%E2%80%85%EC%A0%88%EB%8C%93%EA%B0%92%E2%80%85%ED%9E%99)|23/08/09
