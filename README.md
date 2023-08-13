@@ -15,6 +15,7 @@
 ### :mag_right: Silver
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[1874_스택 수열](https://www.acmicpc.net/problem/1874)|자료구조|[Link](https://github.com/hitobi1014/algorithm/blob/44e55ec0a9a5c381830a71b153ed9b8cc9c7f0ea/%EB%B0%B1%EC%A4%80/Silver/1874.%E2%80%85%EC%8A%A4%ED%83%9D%E2%80%85%EC%88%98%EC%97%B4/%EC%8A%A4%ED%83%9D%E2%80%85%EC%88%98%EC%97%B4.java)|23/08/13
 [1541_잃어버린 괄호](https://www.acmicpc.net/problem/1541)|그리디|[Link](https://github.com/hitobi1014/algorithm/tree/857643616e2ac24ac9b1883ffd11b26c33935ef5/%EB%B0%B1%EC%A4%80/Silver/1541.%E2%80%85%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0%E2%80%85%EA%B4%84%ED%98%B8)|23/08/13
 [10828_스택](https://www.acmicpc.net/problem/10828)|구현|[Link](https://github.com/hitobi1014/algorithm/tree/36d427ec80cbc025ace38eb7371e422b10d6f264/%EB%B0%B1%EC%A4%80/Silver/10828.%E2%80%85%EC%8A%A4%ED%83%9D)|23/08/13
 [1931_회의실배정](https://www.acmicpc.net/problem/1931)|그리디|[Link](https://github.com/hitobi1014/algorithm/blob/19f13deadb38413d6ebdb01b2147a433083a8f0a/%EB%B0%B1%EC%A4%80/Silver/1931.%E2%80%85%ED%9A%8C%EC%9D%98%EC%8B%A4%E2%80%85%EB%B0%B0%EC%A0%95/README.md)|23/08/11
