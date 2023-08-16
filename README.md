@@ -40,6 +40,7 @@
 ### :mag_right: Gold
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[9663_N-Queen](https://www.acmicpc.net/problem/9663)|백트래킹|[Link](https://github.com/hitobi1014/algorithm/tree/02dd630e2ee62d85bfb9fec3c69a263cf1a2833b/%EB%B0%B1%EC%A4%80/Gold/9663.%E2%80%85N%EF%BC%8DQueen)|23/08/16
 [2493_탑](https://www.acmicpc.net/problem/2493)|스택/큐|[Link](https://github.com/hitobi1014/algorithm/tree/d8a43f1f1dcfa346cd2d78392ee6e52e84603c85/%EB%B0%B1%EC%A4%80/Gold/2493.%E2%80%85%ED%83%91)|23/08/07
 
 ## 프로그래머스
