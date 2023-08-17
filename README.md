@@ -15,7 +15,9 @@
 ### :mag_right: Silver
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
-[1874_스택 수열](https://www.acmicpc.net/problem/1874)|자료구조|[Link](https://github.com/hitobi1014/algorithm/blob/44e55ec0a9a5c381830a71b153ed9b8cc9c7f0ea/%EB%B0%B1%EC%A4%80/Silver/1874.%E2%80%85%EC%8A%A4%ED%83%9D%E2%80%85%EC%88%98%EC%97%B4/%EC%8A%A4%ED%83%9D%E2%80%85%EC%88%98%EC%97%B4.java)|23/08/13
+[5568_카드 놓기](https://www.acmicpc.net/problem/5568)|자료구조|[Link](https://github.com/hitobi1014/algorithm/tree/65fd685e2516b9f5619fea8ae8896304544e603f/%EB%B0%B1%EC%A4%80/Silver/5568.%E2%80%85%EC%B9%B4%EB%93%9C%E2%80%85%EB%86%93%EA%B8%B0)|23/08/17
+[11279_최대 힙](https://www.acmicpc.net/problem/11279)|자료구조|[Link](https://github.com/hitobi1014/algorithm/tree/385c130d186c7b03c2da7a72d508f7f2b4550b17/%EB%B0%B1%EC%A4%80/Silver/11279.%E2%80%85%EC%B5%9C%EB%8C%80%E2%80%85%ED%9E%99)|23/08/17
+[2178_미로 탐색](https://www.acmicpc.net/problem/2178)|BFS|[Link](https://github.com/hitobi1014/algorithm/tree/6c95080522d3de979db5622848fe11133f81a934/%EB%B0%B1%EC%A4%80/Silver/2178.%E2%80%85%EB%AF%B8%EB%A1%9C%E2%80%85%ED%83%90%EC%83%89)|23/08/15
 [1541_잃어버린 괄호](https://www.acmicpc.net/problem/1541)|그리디|[Link](https://github.com/hitobi1014/algorithm/tree/857643616e2ac24ac9b1883ffd11b26c33935ef5/%EB%B0%B1%EC%A4%80/Silver/1541.%E2%80%85%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0%E2%80%85%EA%B4%84%ED%98%B8)|23/08/13
 [10828_스택](https://www.acmicpc.net/problem/10828)|구현|[Link](https://github.com/hitobi1014/algorithm/tree/36d427ec80cbc025ace38eb7371e422b10d6f264/%EB%B0%B1%EC%A4%80/Silver/10828.%E2%80%85%EC%8A%A4%ED%83%9D)|23/08/13
 [1931_회의실배정](https://www.acmicpc.net/problem/1931)|그리디|[Link](https://github.com/hitobi1014/algorithm/blob/19f13deadb38413d6ebdb01b2147a433083a8f0a/%EB%B0%B1%EC%A4%80/Silver/1931.%E2%80%85%ED%9A%8C%EC%9D%98%EC%8B%A4%E2%80%85%EB%B0%B0%EC%A0%95/README.md)|23/08/11
@@ -40,6 +42,7 @@
 ### :mag_right: Gold
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[9663_N-Queen](https://www.acmicpc.net/problem/9663)|백트래킹|[Link](https://github.com/hitobi1014/algorithm/tree/02dd630e2ee62d85bfb9fec3c69a263cf1a2833b/%EB%B0%B1%EC%A4%80/Gold/9663.%E2%80%85N%EF%BC%8DQueen)|23/08/16
 [2493_탑](https://www.acmicpc.net/problem/2493)|스택/큐|[Link](https://github.com/hitobi1014/algorithm/tree/d8a43f1f1dcfa346cd2d78392ee6e52e84603c85/%EB%B0%B1%EC%A4%80/Gold/2493.%E2%80%85%ED%83%91)|23/08/07
 
 ## 프로그래머스
