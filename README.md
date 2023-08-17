@@ -15,6 +15,7 @@
 ### :mag_right: Silver
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[5568_카드 놓기](https://www.acmicpc.net/problem/5568)|자료구조|[Link](https://github.com/hitobi1014/algorithm/tree/65fd685e2516b9f5619fea8ae8896304544e603f/%EB%B0%B1%EC%A4%80/Silver/5568.%E2%80%85%EC%B9%B4%EB%93%9C%E2%80%85%EB%86%93%EA%B8%B0)|23/08/17
 [11279_최대 힙](https://www.acmicpc.net/problem/11279)|자료구조|[Link](https://github.com/hitobi1014/algorithm/tree/385c130d186c7b03c2da7a72d508f7f2b4550b17/%EB%B0%B1%EC%A4%80/Silver/11279.%E2%80%85%EC%B5%9C%EB%8C%80%E2%80%85%ED%9E%99)|23/08/17
 [2178_미로 탐색](https://www.acmicpc.net/problem/2178)|BFS|[Link](https://github.com/hitobi1014/algorithm/tree/6c95080522d3de979db5622848fe11133f81a934/%EB%B0%B1%EC%A4%80/Silver/2178.%E2%80%85%EB%AF%B8%EB%A1%9C%E2%80%85%ED%83%90%EC%83%89)|23/08/15
 [1541_잃어버린 괄호](https://www.acmicpc.net/problem/1541)|그리디|[Link](https://github.com/hitobi1014/algorithm/tree/857643616e2ac24ac9b1883ffd11b26c33935ef5/%EB%B0%B1%EC%A4%80/Silver/1541.%E2%80%85%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0%E2%80%85%EA%B4%84%ED%98%B8)|23/08/13
