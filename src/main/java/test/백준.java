@@ -1,64 +1,71 @@
 package test;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.function.Function;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.util.StringTokenizer;
+
 
 public class 백준 {
+    static int N, M, V;
+    static List<ArrayList<Integer>> list;
+    static boolean[] visited; // BFS 방문체크
+    public static void main(String[] args) throws Exception{
+        System.setIn(new FileInputStream("D:\\MJ\\algorithm\\src\\main\\java\\test\\text.txt"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
+        V = Integer.parseInt(st.nextToken());
 
+        list = new ArrayList<>();
+        for (int i = 0; i <= M; i++) {
+            list.add(new ArrayList<>());
+        }
 
-    private static int n, pow;
-    private static int[] num = {2, 3, 5, 7};
-    private static String[] n1 = {"1", "3", "7", "9"};
-    private static StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());
+            int firstVertext = Integer.parseInt(st.nextToken());
+            int secondVertext = Integer.parseInt(st.nextToken());
+            list.get(firstVertext).add(secondVertext);
+//            list.add(firstVertext, new int[]{firstVertext, secondVertext});
+        }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-
-        find();
-//        System.out.println(sb.toString());
+        bfs();
     }
 
-    private static boolean find() {
-        // (1) 맨 앞자리가 2,3,5,7로 시작하는애들
-        // (2) 짝수, 5,7 배수 제외하기
-        // (3) 끝자리가 1,3,7,9 얘네인애들
-        int pow = 4; // 임시 자리수
-        ArrayList<String> listA = new ArrayList<>();
-        listA.add("2");
-        listA.add("3");
-        listA.add("5");
-        listA.add("7");
-        ArrayList<String> listB;
+    private static void bfs() {
+        Queue<List> queue = new ArrayDeque<>();
+        List<Integer> answer = new ArrayList<>();
+        visited = new boolean[list.size()];
+        // 1부터시작
+        queue.offer(list.get(1));
+        visited[1] = true;
+        answer.add(list.get(1).get(1));
 
-        for (int k = 0; k < n-1; k++) {
-            listB = new ArrayList<>();
+        while (!queue.isEmpty()) {
+            ArrayList<Integer> getList = (ArrayList<Integer>) queue.poll();
 
-            for (int i = 0; i < listA.size(); i++) {
-                String n = listA.get(i);
-
-                for (int j = 0; j < n1.length; j++) {
-                    String str2 = n + n1[j];
-                    if (isPrime(Integer.valueOf(str2))) {
-                        listB.add(str2);
-                    }
+            for (int i = 0; i < getList.size(); i++) {
+                int next = getList.get(i);
+                if(next != 0 && !visited[next]){
+                    answer.add(next);
+                    queue.offer(list.get(next));
+                    visited[next] = true;
                 }
-
             }
-            listA = listB;
         }
 
-        listA.forEach(System.out::println);
 
-        return false;
+        answer.forEach(System.out::println);
+
     }
 
-    private static boolean isPrime(int n) {
-        for (int i = 3; i < n; i++) {
-            if(n%i==0) return false;
-        }
-        return true;
+    private static void dfs() {
+
     }
+
+
 
 }
