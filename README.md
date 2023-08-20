@@ -15,6 +15,9 @@
 ### :mag_right: Silver
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[1094_막대기](https://www.acmicpc.net/problem/1094)|수학|[Link](https://github.com/hitobi1014/algorithm/tree/6c8e84989c1bb58ac990fedf4451810286bbfe28/%EB%B0%B1%EC%A4%80/Silver/1094.%E2%80%85%EB%A7%89%EB%8C%80%EA%B8%B0)|23/08/20
+[1929_소수 구하기](https://www.acmicpc.net/problem/1929)|정수론|[Link](https://github.com/hitobi1014/algorithm/tree/1de9af7fad6f019a62fb075153045b15a87098bd/%EB%B0%B1%EC%A4%80/Silver/1929.%E2%80%85%EC%86%8C%EC%88%98%E2%80%85%EA%B5%AC%ED%95%98%EA%B8%B0)|23/08/20
+[1026_보물](https://www.acmicpc.net/problem/1026)|그리디|[Link](https://github.com/hitobi1014/algorithm/tree/3246d230af14af83fc8f1b5996c1bf40c1b721a4/%EB%B0%B1%EC%A4%80/Silver/1026.%E2%80%85%EB%B3%B4%EB%AC%BC)|23/08/20
 [1302_베스트 셀러](https://www.acmicpc.net/problem/1302)|자료구조|[Link](https://github.com/hitobi1014/algorithm/tree/087fe4058bdb829367a04cdc98ecd79b16837963/%EB%B0%B1%EC%A4%80/Silver/1302.%E2%80%85%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%85%80%EB%9F%AC)|23/08/17
 [5568_카드 놓기](https://www.acmicpc.net/problem/5568)|자료구조|[Link](https://github.com/hitobi1014/algorithm/tree/65fd685e2516b9f5619fea8ae8896304544e603f/%EB%B0%B1%EC%A4%80/Silver/5568.%E2%80%85%EC%B9%B4%EB%93%9C%E2%80%85%EB%86%93%EA%B8%B0)|23/08/17
 [11279_최대 힙](https://www.acmicpc.net/problem/11279)|자료구조|[Link](https://github.com/hitobi1014/algorithm/tree/385c130d186c7b03c2da7a72d508f7f2b4550b17/%EB%B0%B1%EC%A4%80/Silver/11279.%E2%80%85%EC%B5%9C%EB%8C%80%E2%80%85%ED%9E%99)|23/08/17
