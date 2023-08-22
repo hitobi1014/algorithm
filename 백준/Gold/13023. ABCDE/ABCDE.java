@@ -11,7 +11,6 @@ public class Main {
     static List[] list;
     static boolean[] visited;
     public static void main(String[] args) throws Exception{
-        System.setIn(new FileInputStream("D:\\MJ\\project\\algorithm\\src\\main\\java\\test\\text.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Function<String, Integer> sToN = Integer::parseInt;
         StringTokenizer st = new StringTokenizer(br.readLine());
