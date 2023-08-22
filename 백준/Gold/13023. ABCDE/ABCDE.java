@@ -11,6 +11,7 @@ public class Main {
     static List[] list;
     static boolean[] visited;
     public static void main(String[] args) throws Exception{
+        System.setIn(new FileInputStream("D:\\MJ\\project\\algorithm\\src\\main\\java\\test\\text.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Function<String, Integer> sToN = Integer::parseInt;
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -32,13 +33,8 @@ public class Main {
             list[b].add(new Integer(a));
         }
 
-//        int start = -1;
         int answer = 0;
         for (int i = 0; i < list.length; i++) {
-//            if(list[i].size()>0){
-//                start = i;
-//                break;
-//            }
             visited[i] = true;
             if(dfs(i)) {
                 answer = 1;
@@ -46,28 +42,21 @@ public class Main {
             }
             visited[i] = false;
         }
-//        int answer = dfs(start) ? 1 : 0;
         System.out.println(answer);
     }
 
     private static boolean dfs(int startIdx) {
         // 친구 연결고리 4개이상이면 true
         if (cnt >=4) return true;
-
         ArrayList<Integer> getList = (ArrayList<Integer>) list[startIdx];
         if (getList.size() < 1) return false;
-
-        //        cnt++;
-//        visited[startIdx] = true;
 
         for (int i = 0; i < getList.size(); i++) {
             int getVertex = getList.get(i);
             if (visited[getVertex]) continue;
             visited[getVertex] = true;
             cnt++;
-
             if(dfs(getVertex)) return true;
-
             visited[getVertex] = false;
             cnt--;
         }
