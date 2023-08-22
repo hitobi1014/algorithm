@@ -7,6 +7,7 @@ import java.util.function.Function;
 public class Solution {
 
     public static void main(String[] args) throws Exception {
+        System.setIn(new FileInputStream("D:\\MJ\\project\\algorithm\\src\\main\\java\\test\\text.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Function<String, Integer> sToN = Integer::parseInt;
         int testCase = sToN.apply(br.readLine());
@@ -18,7 +19,6 @@ public class Solution {
             int m = sToN.apply(st.nextToken()); // m 연산개수
             int[] arr = new int[n+1]; // 수가 1부터 시작하므로 0번인덱스 사용x
             make(arr);
-//            String answer = String.valueOf("#"+i+" ");
             sb.append('#').append(i).append(' ');
             // 연산 시작
             for (int j = 0; j < m; j++) {
@@ -33,14 +33,11 @@ public class Solution {
                 } else {
                     int num1 = find(a, arr);
                     int num2 = find(b, arr);
-//                    answer = answer + String.valueOf(compare(num1, num2));
                     sb.append(compare(num1, num2));
                 }
             }
-//            System.out.println(answer);
             System.out.println(sb.toString());
         }
-//        System.out.println(sb.toString());
     }
 
     private static int compare(int a, int b) {
@@ -54,7 +51,7 @@ public class Solution {
     private static void union(int a, int b, int[] arr) {
         int aRoot = find(a, arr);
         int bRoot = find(b, arr);
-//        if (arr[a] == arr[b]) return;
+
         if (aRoot == bRoot) return;
         arr[bRoot] = aRoot;
     }
