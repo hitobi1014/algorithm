@@ -15,6 +15,8 @@
 ### :mag_right: Silver
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[2468_안전 영역](https://www.acmicpc.net/problem/2468)|DFS/BFS|[Link](https://github.com/hitobi1014/algorithm/blob/d458512ae10a7b5f2c3b75e79b930fa6135d06df/%EB%B0%B1%EC%A4%80/Silver/2468.%E2%80%85%EC%95%88%EC%A0%84%E2%80%85%EC%98%81%EC%97%AD/%EC%95%88%EC%A0%84%E2%80%85%EC%98%81%EC%97%AD.java)|23/08/28
+[2075_N번째 큰 수](https://www.acmicpc.net/problem/2075)|자료구조|[Link](https://github.com/hitobi1014/algorithm/blob/682ec5ef94b2d7ce17d93d4c900a384d8e857ade/%EB%B0%B1%EC%A4%80/Silver/2075.%E2%80%85N%EB%B2%88%EC%A7%B8%E2%80%85%ED%81%B0%E2%80%85%EC%88%98/N%EB%B2%88%EC%A7%B8%E2%80%85%ED%81%B0%E2%80%85%EC%88%98.java)|23/08/27
 [2644_촌수계산](https://www.acmicpc.net/problem/2644)|그래프|[Link](https://github.com/hitobi1014/algorithm/tree/abe30204b79634d1511a2f07248ec22c864e41b7/%EB%B0%B1%EC%A4%80/Silver/2644.%E2%80%85%EC%B4%8C%EC%88%98%EA%B3%84%EC%82%B0)|23/08/25
 [4963_섬의 개수](https://www.acmicpc.net/problem/4963)|그래프|[Link](https://github.com/hitobi1014/algorithm/tree/c7c4af8b3485b95c58871801df95f46dd2ac2a07/%EB%B0%B1%EC%A4%80/Silver/4963.%E2%80%85%EC%84%AC%EC%9D%98%E2%80%85%EA%B0%9C%EC%88%98)|23/08/21
 [1094_막대기](https://www.acmicpc.net/problem/1094)|수학|[Link](https://github.com/hitobi1014/algorithm/tree/6c8e84989c1bb58ac990fedf4451810286bbfe28/%EB%B0%B1%EC%A4%80/Silver/1094.%E2%80%85%EB%A7%89%EB%8C%80%EA%B8%B0)|23/08/20
