@@ -59,7 +59,7 @@ public class Main {
 
     private static void findTravelMinCost(int depth, int searchIdx, int cost) {
         ArrayList<travel> getList = travelList[searchIdx];
-
+        if (answer<=cost) return;
         // 기저조건
         if (depth == N) {
             int stCost = 0;
