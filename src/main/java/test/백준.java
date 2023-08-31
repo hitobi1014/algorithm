@@ -2,60 +2,68 @@ package test;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Collections;
-import java.util.PriorityQueue;
-import java.util.StringTokenizer;
-import java.util.stream.Stream;
+import java.util.LinkedList;
 
 /**
- * N번째 큰 수
- * N*N = N^2
+ * depth > 1 이면 return 하기
+ * 방문체크, 방문하지 않았으면 카운트 증가와 dfs 보내기
+ * line1. N
+ * line2. N*N char 문자
+ * 필요: char[][], 답 출력 answer
  */
 public class 백준 {
-    static int N, arr[];
-    public static void main(String[] args) throws Exception{
+    static char[][] friends;
+    static int N;
+    static LinkedList[] list;
+    static boolean[] visited;
+
+    public static void main(String[] args) throws Exception {
+        int answer = 0;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
-        // 모든 수는 자신의 한 칸 위에있는 수 보다 크다..
-        PriorityQueue<Integer> queue = new PriorityQueue<>();
-        int[][] arr = new int[N][N];
+        friends = new char[N][N];
+        list = new LinkedList[N];
+
 
         for (int i = 0; i < N; i++) {
-            arr[i] = Stream.of(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+            list[i] = new LinkedList<Integer>();
         }
-        int[] idx = new int[2];
-        int cnt=1;
 
-        int max = Integer.MIN_VALUE;
-        for (int col = 0; col < N; col++) {
-            if (arr[N - 1][col] > max) {
-                max = arr[N - 1][col];
-                idx[0] = N - 1;
-                idx[1] = col;
+        for (int i = 0; i < N; i++) {
+            String str = br.readLine();
+            for (int j = 0; j < N; j++) {
+                char x = str.charAt(j);
+                if (x == 'Y') {
+                    list[i].add(j);
+                }
             }
         }
 
-        idx[0]--;
-
-        /**
-         * 5
-         * 12 7 9 15 5
-         * 13 8 11 19 6
-         * 21 10 26 31 16
-         * 48 14 28 35 25
-         * 52 20 32 41 49
-         */
-
-        while (cnt < N) {
-            int rowMax = 0;
-            int colMax = 0;
-
-            for (int col = idx[1]; col < N; col++) {
-
+        for (int i = 0; i < list.length; i++) {
+            if (list[i].size() > 0) {
+                visited = new boolean[N];
+                visited[i] = true;
+                answer = Math.max(answer, dfs(i, 0, 0));
             }
         }
-
-        queue.stream().sorted(Collections.reverseOrder()).skip(N-1).limit(1).forEach(System.out::println);
+        System.out.println(answer);
     }
 
+    private static int dfs(int idx, int depth, int accrue) {
+        if (depth > 1) {
+            return accrue;
+        }
+        LinkedList getList = list[idx];
+
+        for (int i = 0; i < getList.size(); i++) {
+            int curIdx = (int) getList.get(i);
+            if(visited[curIdx]) continue;
+            visited[curIdx] = true;
+//            visited[idx] = false;
+            accrue = dfs(curIdx, depth + 1, accrue + 1);
+//            visited[curIdx] = false;
+        }
+
+        return accrue;
+    }
 }
