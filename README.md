@@ -15,6 +15,7 @@
 ### :mag_right: Silver
 문제|알고리즘|풀이|날짜
 ---|:---:|:---:|:---:
+[1535_안녕](https://www.acmicpc.net/problem/1535)|브루트포스|[Link](https://github.com/hitobi1014/algorithm/blob/00feb8d7e1ddc0548230ce583d2cb1f003e1c0df/%EB%B0%B1%EC%A4%80/Silver/1535.%E2%80%85%EC%95%88%EB%85%95/%EC%95%88%EB%85%95.java)|23/09/09
 [2559_수열](https://www.acmicpc.net/problem/2559)|슬라이딩윈도우|[Link](https://github.com/hitobi1014/algorithm/blob/2c01da40ae8178684c03902b9dccaaa333d96e53/%EB%B0%B1%EC%A4%80/Silver/2559.%E2%80%85%EC%88%98%EC%97%B4/%EC%88%98%EC%97%B4.java)|23/09/03
 [16165_걸그룹 마스터 준석이](https://www.acmicpc.net/problem/16165)|해시|[Link](https://github.com/hitobi1014/algorithm/blob/e8455b4897d683e696c8d84affb500251b389f63/%EB%B0%B1%EC%A4%80/Silver/16165.%E2%80%85%EA%B1%B8%EA%B7%B8%EB%A3%B9%E2%80%85%EB%A7%88%EC%8A%A4%ED%84%B0%E2%80%85%EC%A4%80%EC%84%9D%EC%9D%B4/%EA%B1%B8%EA%B7%B8%EB%A3%B9%E2%80%85%EB%A7%88%EC%8A%A4%ED%84%B0%E2%80%85%EC%A4%80%EC%84%9D%EC%9D%B4.java)|23/09/03
 [10971_외판원 순회2](https://www.acmicpc.net/problem/10971)|완전탐색|[Link](https://github.com/hitobi1014/algorithm/blob/981759e10aba0849643d74d89e4471405e957ac7/%EB%B0%B1%EC%A4%80/Silver/10971.%E2%80%85%EC%99%B8%ED%8C%90%EC%9B%90%E2%80%85%EC%88%9C%ED%9A%8C%E2%80%852/%EC%99%B8%ED%8C%90%EC%9B%90%E2%80%85%EC%88%9C%ED%9A%8C%E2%80%852.java)|23/08/30
