@@ -2,40 +2,67 @@ package test;
 
 import java.io.*;
 import java.util.*;
+import java.util.stream.Stream;
 
 /**
  *
  */
 public class 백준 {
-    static int N, M;
-    static char[] S;
-    public static void main(String[] args) throws Exception{
+    static int[][] arr;
+    static int[] numMap;
+
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        N = Integer.parseInt(br.readLine());
-        M = Integer.parseInt(br.readLine());
-        S = br.readLine().toCharArray();
+        arr = new int[9][9];
 
-        int lt = 0;
-        int answer = 0;
-        A:while ((lt + (N * 2) + 1) < M) {
-
-            if (S[lt] != 'I') {
-                lt++;
-                continue;
-            }
-
-            // 탐색문자열 만큼 for문
-            for (int i = 0; i < (N * 2) + 1; i++) {
-                if (i%2==0 && S[lt+i]=='I') continue;
-                if (i%2==1 && S[lt+i]=='O') continue;
-                lt++;
-                continue A;
-            }
-
-            // 탐색문자열이 다 맞았을경우 cnt 증가와 lt를 N만큼 증가
-            answer++;
-            lt = N % 2 == 0 ? lt + N : lt + N + 1;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Stream.of(br.readLine().split("")).mapToInt(Integer::parseInt).toArray();
         }
-        System.out.println(answer);
+
+        /**
+         * 비교
+         * 1. 행
+         * 2. 열
+         * 3. 영역
+         */
+
+
+    }
+
+    static void 스도쿠(){
+        Set<Integer> num = new HashSet<>();
+        for (int i = 1; i <= 9; i++) {
+            num.add(i);
+        }
+
+        // 행
+        // 열은 나중에..
+        for (int r = 0; r < 9; r++) {
+            if(arr[r][1] != 0){
+                num.remove(arr[r][1]);
+            }
+        }
+
+        // 열
+        for (int c = 0; c < 9; c++) {
+            if(arr[1][c] != 0){
+                num.remove(arr[1][c]);
+            }
+        }
+
+        int row = 0; // 받은 row
+        int col = 0; // 받은 col
+
+        // 영역
+        for (int i = row; i < row+3; i++) {
+            for (int j = col; j < col+3; j++) {
+                if(arr[i][j] != 0){
+                    num.remove(arr[i][j]);
+                }
+            }
+        }
+
+
+
     }
 }
