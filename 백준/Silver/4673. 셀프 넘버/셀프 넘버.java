@@ -17,6 +17,8 @@ public class Main {
 			set.remove(x);
 		}
 
-		set.forEach(System.out::println);
+		StringBuilder sb = new StringBuilder();
+		set.forEach(x-> sb.append(x).append('\n'));
+		System.out.println(sb.toString());
 	}
 }
