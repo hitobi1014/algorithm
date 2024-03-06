@@ -1,31 +1,22 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
 
 public class Main {
-    public static void main(String[] args) {
-        int n = 1;
-        HashMap<Integer, Integer> map = new HashMap<>();
+	public static void main(String[] args) {
+		HashSet<Integer> set = new HashSet<>();
+		for (int i = 1; i <= 10000; i++) {
+			set.add(i);
+		}
 
-        for (int i = 1; i <= 10000; i++) {
-            map.put(i, 0);
-        }
+		for (int i = 1; i <= 10000; i++) {
+			int num = i;
+			int x = num;
+			while (num != 0){
+				x += num%10;
+				num/=10;
+			}
+			set.remove(x);
+		}
 
-        while (n <= 10000) {
-            int num=0;
-            for (char x : String.valueOf(n).toCharArray()) {
-                num += Character.getNumericValue(x);
-            }
-            num += n;
-            if (num <= 10000) map.put(num, map.get(num) + 1);
-            n++;
-        }
-
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (entry.getValue() == 0) {
-                System.out.println(entry.getKey());
-            }
-        }
-
-    }
-
+		set.forEach(System.out::println);
+	}
 }
