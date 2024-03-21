@@ -1,26 +1,25 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class Main {
-    // 백준허브
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        String search = sc.nextLine();
+	public static void main(String[] args) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println(solution(str,search));
-    }
+		String input = br.readLine();
+		String key = br.readLine();
+		int answer = 0;
+		int startIdx = 0;
 
-    public static int solution(String str, String search) {
-        int answer = 0;
-        int startIdx = 0;
-        int searchLength = search.length();
+		while(startIdx+key.length() <= input.length()) {
+			String contain = input.substring(startIdx, startIdx + key.length());
 
-        while (startIdx < str.length()) {
-            int idx = str.indexOf(search, startIdx);
-            if (idx == -1) break;
-            answer++;
-            startIdx = searchLength + idx;
-        }
-
-        return answer;
-    }
+			if (contain.equals(key)) {
+				answer++;
+				startIdx += key.length();
+			} else {
+				startIdx++;
+			}
+		}
+		System.out.println(answer);
+	}
 }
