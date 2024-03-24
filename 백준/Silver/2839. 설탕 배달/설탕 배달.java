@@ -1,17 +1,30 @@
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int sugar = sc.nextInt();
-        if (sugar == 4 || sugar == 7) {
-            System.out.println(-1);
-        } else if (sugar % 5 == 0) {
-            System.out.println((sugar / 5));
-        } else if (sugar % 5 == 1 || sugar % 5 == 3) {
-            System.out.println((sugar / 5) + 1);
-        } else if (sugar % 5 == 2 || sugar % 5 == 4) {
-            System.out.println((sugar / 5) + 2);
-        }
-    }
+	public static void main(String[] args) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int N = Integer.parseInt(br.readLine());
+
+		int aCount=0, bCount=0, remain = 0;
+		int answer = 0;
+		aCount = N/5;
+		remain = N%5;
+
+		while(remain <= N) {
+			if (remain%3 == 0) {
+				bCount = remain/3;
+				remain %= 3;
+				break;
+			} else {
+				aCount--;
+				remain += 5;
+			}
+		}
+		answer = aCount + bCount;
+		if (remain>N || remain != 0) answer = -1;
+
+		System.out.println(answer);
+	}
 }
