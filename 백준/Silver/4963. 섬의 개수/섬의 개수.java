@@ -1,71 +1,62 @@
-import java.io.*;
 import java.util.*;
-import java.util.function.*;
-import java.util.stream.Stream;
+import java.io.*;
 
 public class Main {
-    // 8방 상하좌우 좌상 좌하 우상 우하
-    static int[] dx = {-1, 1, 0, 0, -1, 1, -1, 1};
-    static int[] dy = {0, 0, -1, 1, -1, -1, 1, 1};
-    static boolean[][] visited;
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Function<String, Integer> sToN = Integer::parseInt;
-        StringBuilder sb = new StringBuilder();
-        StringTokenizer st;
 
-        while (true) {
-            st = new StringTokenizer(br.readLine());
-            int w = sToN.apply(st.nextToken());
-            int h = sToN.apply(st.nextToken());
-            if (w==0 && h==0) break;
+	static int[][] map;
+	static int[] dy = {-1,1,0,0,-1,1,-1,1};
+	static int[] dx = {0,0,-1,1,-1,-1,1,1};
+	static int W,H;
 
-            int[][] map = new int[h][w];
-            visited = new boolean[h][w];
-            int cnt = 0;
+	public static void main(String[] args) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 
-            for (int i = 0; i < map.length; i++) {
-                map[i] = Stream.of(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-            }
+		while (true) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			W = Integer.parseInt(st.nextToken());
+			H = Integer.parseInt(st.nextToken());
 
-            for (int i = 0; i < map.length; i++) {
-                for (int j = 0; j < map[i].length; j++) {
-                    if (map[i][j] == 1 && !visited[i][j]) {
-                        bfs(i, j, map);
-                        cnt++;
-                    }
-                }
-            }
-            sb.append(cnt).append('\n');
-        }
-        System.out.println(sb.toString());
+			if (W == 0 && H == 0) break;
+			map = new int[H][W];
+			int answer = 0;
 
-    }
+			// input
+			for (int i=0; i<H; i++){
+				st = new StringTokenizer(br.readLine());
+				for (int j=0; j<W; j++){
+					map[i][j] = Integer.parseInt(st.nextToken());
+				}
+			}
 
-    private static void bfs(int row, int col, int[][] map) {
-        Queue<int[]> queue = new ArrayDeque<>();
-        queue.offer(new int[]{row, col});
-        visited[row][col] = true;
+			// 로직
+			for (int i=0; i<H; i++) {
+				for (int j=0; j<W;j++){
+					if (map[i][j] == 1) {
+						answer++;
+						dfs(i,j);
+					}
+				}
+			}
 
-        while (!queue.isEmpty()) {
-            int[] nowPos = queue.poll();
-            int curRow = nowPos[0];
-            int curCol = nowPos[1];
+			sb.append(answer).append('\n');
+		}
 
-            // 8방 탐색
-            for (int i = 0; i < 8; i++) {
-                int nextRow = curRow + dx[i];
-                int nextCol = curCol + dy[i];
+		System.out.println(sb.toString());
 
-                // row,col 범위가 맵을 벗어나면 continue
-                if (nextRow < 0 || nextCol <0 || nextRow >= map.length || nextCol >= map[0].length) continue;
 
-                if (map[nextRow][nextCol] != 0 && !visited[nextRow][nextCol]){
-                    queue.offer(new int[]{nextRow, nextCol});
-                    visited[nextRow][nextCol] = true;
-                }
-            }
-        }
-    }
+	}
 
+	static void dfs(int y, int x) {
+		map[y][x] = -1;
+
+		for (int i=0; i<8; i++) {
+			int nextY = y+dy[i];
+			int nextX = x+dx[i];
+
+			if (nextY < 0 || nextY >= H || nextX < 0 || nextX >= W || map[nextY][nextX] != 1) continue;
+			dfs(nextY, nextX);
+		}
+
+	}
 }
