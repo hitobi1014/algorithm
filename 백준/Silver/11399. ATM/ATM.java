@@ -1,32 +1,30 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int[] time = new int[N];
-        for (int i = 0; i < N; i++) {
-            time[i] = sc.nextInt();
-        }
 
-        System.out.println(solution(N, time));
-    }
+	public static void main(String[] args) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    static int solution(int N, int[] time){
-        int answer = 0;
-        int sum = 0;
-        int minTime = Integer.MAX_VALUE;
-        Arrays.sort(time);
-        sum = time[0];
+		int N = Integer.parseInt(br.readLine());
+		int[] arr = new int[N];
 
-        for (int i = 1; i < time.length; i++) {
-            answer += sum;
-            sum += time[i];
-        }
-        answer += sum;
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		for (int i=0; i<N; i++) {
+			arr[i] = Integer.parseInt(st.nextToken());
+		}
 
-        return answer;
-    }
+		Arrays.sort(arr);
+		int answer = arr[0];
+		int nextNum = arr[0];
+
+		for (int i=1; i<N; i++) {
+			nextNum += arr[i];
+			answer += nextNum;
+		}
+
+		System.out.println(answer);
+
+	}
 
 }
