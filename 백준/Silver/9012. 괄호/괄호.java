@@ -1,34 +1,54 @@
 import java.io.*;
 import java.util.*;
 
+public class Main
+{
+    // tip: arguments are passed via the field below this editor
+    public static void main(String[] args) throws Exception
+    {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int tc = Integer.parseInt(br.readLine());
 
-public class Main {
+        StringBuilder sb = new StringBuilder();
 
-	public static void main(String[] args) throws Exception{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int T = Integer.parseInt(br.readLine());
-		StringBuilder sb = new StringBuilder();
+        for (int i=0; i<tc; i++) {
+            String str = br.readLine();
 
-		for (int i=0; i<T;i++){
-			String str = br.readLine();
-			Stack<Character> stack = new Stack<>();
-			String answer = "YES";
-			for (char c : str.toCharArray()) {
-				if (c == '(') {
-					stack.add(c);
-				} else {
-					if (!stack.isEmpty() && stack.peek() == '(') {
-						stack.pop();
-					} else {
-						answer = "NO";
-						break;
-					}
-				}
-			}
-			if (!stack.isEmpty()) answer = "NO";
-			sb.append(answer).append('\n');
-		}
+            if (str.charAt(0) == ')') {
+                sb.append("NO").append('\n');
+                continue;
+            }
 
-		System.out.println(sb);
-	}
+            Stack<Character> stack = new Stack<Character>();
+            boolean flag = true;
+
+            for (char c : str.toCharArray()) {
+                if (stack.empty() && c == ')') {
+                    flag = false;
+                    break;
+                }
+
+                if (c == '(') {
+                    stack.push(c);
+                } else {
+                    if (stack.pop() == '(') {
+                        continue;
+                    } else {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+
+            if (stack.size() > 0 || !flag) {
+                sb.append("NO").append('\n');
+            } else {
+                sb.append("YES").append('\n');
+            }
+
+        }
+
+
+        System.out.println(sb);
+    }
 }
