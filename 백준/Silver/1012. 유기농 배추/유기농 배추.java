@@ -3,71 +3,66 @@ import java.util.*;
 
 public class Main {
 
-    static int N, M, K;
-    static int[][] map;
-    static int[] dx = {-1, 1, 0, 0};
-    static int[] dy = {0, 0, -1, 1};
-    static boolean[][] visited;
+    static int[] dy = {-1, 1, 0, 0};
+    static int[] dx = {0, 0, -1, 1};
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int testCase = Integer.parseInt(br.readLine());
+
+        int tc = Integer.parseInt(br.readLine());
         StringBuilder sb = new StringBuilder();
 
-        for (int tc=0; tc<testCase; tc++){
+        for (int tCnt = 0; tCnt < tc; tCnt++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-            M = Integer.parseInt(st.nextToken()); // 가로길이
-            N = Integer.parseInt(st.nextToken()); // 세로길이
-            K = Integer.parseInt(st.nextToken()); // 배추위치 개수
+            int M = Integer.parseInt(st.nextToken());
+            int N = Integer.parseInt(st.nextToken());
+            int K = Integer.parseInt(st.nextToken());
 
-            map = new int[N][M];
-            visited = new boolean[N][M];
+            int[][] map = new int[M][N];
+            boolean[][] visited = new boolean[M][N];
 
-            // 배추개수 만큼
-            for (int i=0; i<K; i++){
+            for (int c=0; c < K; c++) {
                 st = new StringTokenizer(br.readLine());
-                int col = Integer.parseInt(st.nextToken());
-                int row = Integer.parseInt(st.nextToken());
-                map[row][col] = 1;
+                int y = Integer.parseInt(st.nextToken());
+                int x = Integer.parseInt(st.nextToken());
+                map[y][x] = 1;
             }
 
             int cnt = 0;
             for (int i = 0; i < map.length; i++) {
-                for (int j = 0; j < map[i].length; j++) {
+                for (int j=0; j < map[0].length; j++) {
                     if (map[i][j] == 1 && !visited[i][j]) {
                         cnt++;
-                        bfs(i, j);
+                        bfs(i,j,map,visited);
                     }
                 }
             }
 
-            sb.append(cnt).append('\n');
+            sb.append(cnt).append("\n");
         }
 
         System.out.println(sb);
-
     }
 
-    static void bfs(int row, int col) {
+    static void bfs(int y, int x, int[][] map, boolean[][] visited) {
         Queue<int[]> queue = new LinkedList<>();
-        queue.offer(new int[]{row, col});
-        visited[row][col] = true;
+        queue.offer(new int[]{y,x});
+        visited[y][x] = true;
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             int[] poll = queue.poll();
-            int curRow = poll[0];
-            int curCol = poll[1];
+            int curY = poll[0];
+            int curX = poll[1];
 
             for (int i = 0; i < 4; i++) {
-                int nextRow = curRow + dx[i];
-                int nextCol = curCol + dy[i];
+                int nextY = curY + dy[i];
+                int nextX = curX + dx[i];
 
-                if (nextRow < 0 || nextRow >= N || nextCol < 0 || nextCol >= M || visited[nextRow][nextCol]) continue;
+                if (nextY < 0 || nextY >= map.length || nextX < 0 || nextX >= map[0].length) continue;
 
-                // 4방이 배추인지 확인
-                if (map[nextRow][nextCol] == 1) {
-                    visited[nextRow][nextCol] = true;
-                    queue.offer(new int[]{nextRow, nextCol});
+                if (map[nextY][nextX] == 1 && !visited[nextY][nextX]) {
+                    queue.offer(new int[]{nextY,nextX});
+                    visited[nextY][nextX] = true;
                 }
             }
         }
