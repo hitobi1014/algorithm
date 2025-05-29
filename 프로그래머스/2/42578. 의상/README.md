@@ -1,10 +1,10 @@
 # [level 2] 의상 - 42578 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42578) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42578?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 78 MB, 시간: 0.06 ms
+메모리: 63.8 MB, 시간: 0.44 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 07월 09일 23:37:07
+2025년 05월 29일 23:43:06
 
 ### 문제 설명
 
